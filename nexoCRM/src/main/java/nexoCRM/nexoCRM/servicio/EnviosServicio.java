@@ -21,8 +21,8 @@ public class EnviosServicio {
         return enviosRepositorio.findById(id);
     }
 
-    public Envios agregarEnvio(Envios historial){
-        return enviosRepositorio.save(historial);
+    public Envios agregarEnvio(Envios envios){
+        return enviosRepositorio.save(envios);
     }
 
     public boolean eliminarPorId(Integer id){
