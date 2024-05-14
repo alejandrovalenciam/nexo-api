@@ -26,4 +26,6 @@ public class Clientes implements Serializable{
 
     @Column(unique = true)
     private String correo;
+
+    private String estado;
 }

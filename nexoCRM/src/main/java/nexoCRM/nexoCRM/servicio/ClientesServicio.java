@@ -17,6 +17,10 @@ public class ClientesServicio {
         return (List<Clientes>) clientesRepositorio.findAll();
     }
 
+    public List<Clientes> mostrar(String estado){
+        return clientesRepositorio.findByEstado(estado);
+    }
+
     public Optional<Clientes> mostrarPorId(Integer id){
         return clientesRepositorio.findById(id);
     }

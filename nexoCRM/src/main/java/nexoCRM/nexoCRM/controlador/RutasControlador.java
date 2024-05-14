@@ -10,6 +10,7 @@ import nexoCRM.nexoCRM.servicio.RutasServicio;
 
 @RestController
 @RequestMapping("/rutas")
+@CrossOrigin("*")
 public class RutasControlador {
     @Autowired
     private RutasServicio rutasServicio;

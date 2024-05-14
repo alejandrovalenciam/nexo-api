@@ -10,6 +10,7 @@ import nexoCRM.nexoCRM.servicio.HistorialServicio;
 
 @RestController
 @RequestMapping("/historial")
+@CrossOrigin("*")
 public class HistorialControlador {
     @Autowired
     private HistorialServicio historialServicio;

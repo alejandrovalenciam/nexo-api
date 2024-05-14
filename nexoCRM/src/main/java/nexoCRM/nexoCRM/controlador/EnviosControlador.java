@@ -10,6 +10,7 @@ import nexoCRM.nexoCRM.servicio.EnviosServicio;
 
 @RestController
 @RequestMapping("/envios")
+@CrossOrigin("*")
 public class EnviosControlador {
     @Autowired
     private EnviosServicio enviosServicio;

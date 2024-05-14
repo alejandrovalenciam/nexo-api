@@ -10,6 +10,7 @@ import nexoCRM.nexoCRM.servicio.AdminServicio;
 
 @RestController
 @RequestMapping("/admin")
+@CrossOrigin("*")
 public class AdminControlador {
     @Autowired
     private AdminServicio adminServicio;

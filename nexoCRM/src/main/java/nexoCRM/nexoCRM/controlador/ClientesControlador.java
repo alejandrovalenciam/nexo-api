@@ -11,13 +11,19 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/clientes")
+@CrossOrigin("*")
 public class ClientesControlador {
     @Autowired
     private ClientesServicio clientesServicio;
 
-    @GetMapping("/")
-    public List<Clientes> mostrarClientes() {
-        return clientesServicio.mostrarClientes();
+    // @GetMapping("/")
+    // public List<Clientes> mostrarClientes() {
+    //     return clientesServicio.mostrarClientes();
+    // }
+
+    @GetMapping("")
+    public List<Clientes> mostrar(@RequestParam("estado") String estado) {
+        return (List<Clientes>) clientesServicio.mostrar(estado);
     }
     
     @GetMapping(path = "/{id}")
