@@ -18,6 +18,8 @@ public class Envios implements Serializable{
     private String estado;
     private Date fechaEntrega;
     private String detalles;
+    private String direccion;
+    private String destino;
 
     @ManyToOne
     @JoinColumn(name = "id_cliente")
