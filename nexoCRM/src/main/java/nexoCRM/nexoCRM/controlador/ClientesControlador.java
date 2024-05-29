@@ -16,10 +16,10 @@ public class ClientesControlador {
     @Autowired
     private ClientesServicio clientesServicio;
 
-    // @GetMapping("/")
-    // public List<Clientes> mostrarClientes() {
-    //     return clientesServicio.mostrarClientes();
-    // }
+     @GetMapping("/")
+     public List<Clientes> mostrarClientes() {
+         return clientesServicio.mostrarClientes();
+     }
 
     @GetMapping("")
     public List<Clientes> mostrar(@RequestParam("estado") String estado) {

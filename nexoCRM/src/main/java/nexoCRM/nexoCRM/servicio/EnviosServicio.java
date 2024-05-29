@@ -20,6 +20,14 @@ public class EnviosServicio {
     public Optional<Envios> mostrarPorId(Integer id){
         return enviosRepositorio.findById(id);
     }
+    
+    public List<Envios> mostrarPorEstado(String estado){
+        return enviosRepositorio.findByEstado(estado);
+    }
+    
+    public List<Envios> mostrarPorDestino(String destino){
+        return enviosRepositorio.findByDestino(destino);
+    }
 
     public Envios agregarEnvio(Envios envios){
         return enviosRepositorio.save(envios);

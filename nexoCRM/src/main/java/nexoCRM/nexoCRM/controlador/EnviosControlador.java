@@ -24,6 +24,16 @@ public class EnviosControlador {
     public Optional<Envios> mostrarPorId(@PathVariable("id") Integer id) {
         return enviosServicio.mostrarPorId(id);
     }
+    
+    @GetMapping("")
+    public List<Envios> mostrarPorEstado(@RequestParam("estado") String estado) {
+        return (List<Envios>) enviosServicio.mostrarPorEstado(estado);
+    }
+    
+    @GetMapping("/ciudad")
+    public List<Envios> mostrarPorDestino(@RequestParam("destino") String destino) {
+        return (List<Envios>) enviosServicio.mostrarPorDestino(destino);
+    }
 
     @PostMapping("/agregar")
     public Envios agregarEnvio(@RequestBody Envios envio) {
