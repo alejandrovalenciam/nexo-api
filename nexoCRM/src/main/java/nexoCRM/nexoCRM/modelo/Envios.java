@@ -14,9 +14,10 @@ public class Envios implements Serializable{
     private Integer id;
 
     private Date fechaEnvio;
+    private Date fechaEntrega;
     private String tipoEnvio;
     private String estado;
-    private Date fechaEntrega;
+    
     private String detalles;
     private String direccion;
     private String destino;
